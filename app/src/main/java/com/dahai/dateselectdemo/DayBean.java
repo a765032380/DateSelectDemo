@@ -9,10 +9,25 @@ public class DayBean {
     private int year;           //属于的年份
     private int month;           //属于的月份
     private int day ;           //日期，几号
+    private boolean isToday;    //是不是今天
+    private boolean isWeekend;  //是不是周末
     private String jr;
     private boolean isSelect;
     private boolean isMiddle;
+    private boolean isSelectRuZhu;
+    private boolean isSelectLiKai;
 
+
+    public DayBean(int year, int month, int day, String jr, boolean isSelect, boolean isMiddle , boolean isToday, boolean isWeekend) {
+        this.year = year;
+        this.month = month;
+        this.day = day;
+        this.isToday = isToday;
+        this.isWeekend = isWeekend;
+        this.jr = jr;
+        this.isSelect = isSelect;
+        this.isMiddle = isMiddle;
+    }
 
     public DayBean(int year, int month, int day, String jr, boolean isSelect, boolean isMiddle) {
 
@@ -22,6 +37,38 @@ public class DayBean {
         this.jr = jr;
         this.isSelect = isSelect;
         this.isMiddle = isMiddle;
+    }
+
+    public boolean isSelectRuZhu() {
+        return isSelectRuZhu;
+    }
+
+    public void setSelectRuZhu(boolean selectRuZhu) {
+        isSelectRuZhu = selectRuZhu;
+    }
+
+    public boolean isSelectLiKai() {
+        return isSelectLiKai;
+    }
+
+    public void setSelectLiKai(boolean selectLiKai) {
+        isSelectLiKai = selectLiKai;
+    }
+
+    public boolean isToday() {
+        return isToday;
+    }
+
+    public void setToday(boolean today) {
+        isToday = today;
+    }
+
+    public boolean isWeekend() {
+        return isWeekend;
+    }
+
+    public void setWeekend(boolean weekend) {
+        isWeekend = weekend;
     }
 
     public String getJr() {

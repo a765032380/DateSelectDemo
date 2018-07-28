@@ -52,7 +52,7 @@ public class MonthDateSelectAdapter extends RecyclerView.Adapter<MonthDateSelect
         if (position==0) {
             RecyclerView mRecyclerView = holder.mRecyclerView;
             mRecyclerView.setLayoutManager(new GridLayoutManager(mRecyclerView.getContext(), 7));
-            adapter = new DayDateSelectAdapter(context,currList);
+            adapter = new DayDateSelectAdapter(context,currList,list);
             mRecyclerView.setAdapter(adapter);
             mRecyclerView.setHasFixedSize(true);
 
